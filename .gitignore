@@ -1,0 +1,17 @@
+# MacOS
+.DS_Store
+
+# Development
+.vscode
+
+# Node
+logs
+*.logs
+
+node_modules
+
+# Environment
+.env
+
+# Assignment & Exam
+assignments
