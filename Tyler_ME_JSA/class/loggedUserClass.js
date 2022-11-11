@@ -25,6 +25,19 @@ class loggedUserClass {
     getLoggedUser() {
         return this.loggedUser;
     }
+
+    toObject() {
+        return {
+            userid: this.#userid,
+            fName: this.#fName,
+            lName: this.#lName,
+            email: this.#email,
+            phone: this.#phone,
+            username: this.#username,
+            pass: this.#pass,
+            role: this.#role
+        }
+    }
 }
 
 export default loggedUserClass;

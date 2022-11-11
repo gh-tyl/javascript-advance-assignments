@@ -8,10 +8,10 @@
             </tr>
         </thead>
         <tbody>
-            <tr ng-repeat="log in logs">
-                <td>{{log.id}}</td>
-                <td>{{log.username}}</td>
-                <td>{{log.time}}</td>
+            <tr ng-repeat="log in lastLogins">
+                <td>{{log.userid}}</td>
+                <td>{{log.fullname}}</td>
+                <td>{{log.lastLogin}}</td>
             </tr>
         </tbody>
     </table>

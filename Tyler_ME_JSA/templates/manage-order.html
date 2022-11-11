@@ -1,24 +1,36 @@
 <div id="order-table">
     <table>
         <thead>
-            <th>
-            <th>ID</th>
-            <th>Name</th>
-            <th>Product Of</th>
-            <th>Price</th>
-            <th>Amount</th>
-            <th>Shippment</th>
-            <th>Total</th>
-            <th>Option</th>
-            </th>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Product Of</th>
+                <th>Price</th>
+                <th>Amount</th>
+                <th>Shippment</th>
+                <th>Total</th>
+                <th>Option</th>
+            </tr>
         </thead>
         <tbody>
-
+            <tr ng-repeat="drug in cartList">
+                <!-- <td><input type="checkbox" ng-model="drug.selected"></td> -->
+                <td>{{drug.drugID}}</td>
+                <td>{{drug.drugName}}</td>
+                <td>{{drug.productOf}}</td>
+                <td>{{drug.price}}</td>
+                <td><input type="number" ng-model="drug.amount" min="1" max="100"></td>
+                <!-- <td><input type="number" ng-model="drug.shippment" min="1" max="100"></td> -->
+                <!-- checkbox -->
+                <td><input type="checkbox" ng-model="drug.shippment" ng-true-value="100" ng-false-value="0"></td>
+                <td>{{drug.price * drug.amount + drug.shippment}}</td>
+                <td><button ng-click="remove(drug.drugID)">Remove</button></td>
+            </tr>
         </tbody>
         <tfoot>
             <tr>
                 <td>Total</td>
-                <td id="total" colspan="6"></td>
+                <td id="total" colspan="7">{{totalSum()}}</td>
             </tr>
     </table>
 </div>

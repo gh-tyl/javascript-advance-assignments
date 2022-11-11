@@ -11,18 +11,22 @@
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular-route.min.js"></script>
 </head>
 
-<body>
+<body ng-app="myApp">
     <header>
         <nav>
             <ul>
-                <li><a href="#/login">Login</a></li>
-                <li><a href="#/drug-list">Drug List</a></li>
-                <li><a href="#/manage-order">Manage Order</a></li>
-                <li><a href="#/log-report">Log report</a></li>
-                <li><a href="#/sign-out">sign out</a></li>
+                <li><a href="#/!">Login</a></li>
+                <li><a href="#!drug-list">Drug List</a></li>
+                <li><a href="#!manage-order">Manage Order</a></li>
+                <li><a href="#!log-report">Log report</a></li>
+                <li><a href="#/!" ng-click="sigout()">sign out</a></li>
+                <!-- <li><a href="#!sign-out">sign out</a></li> -->
             </ul>
         </nav>
     </header>
+    <main ng-view>
+
+    </main>
 </body>
 <script type="module" src="./js/index.js"></script>
 
