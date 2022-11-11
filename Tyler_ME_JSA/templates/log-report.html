@@ -1,0 +1,19 @@
+<div id="log-report-table">
+    <table>
+        <thead>
+            <tr>
+                <th>user ID</th>
+                <th>Full Name</th>
+                <th>Login Time</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="log in logs">
+                <td>{{log.id}}</td>
+                <td>{{log.username}}</td>
+                <td>{{log.time}}</td>
+            </tr>
+        </tbody>
+    </table>
+
+</div>
