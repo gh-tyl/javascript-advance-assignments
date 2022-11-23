@@ -11,7 +11,6 @@
         </div>
         <div class="to unit-set">
             <input type="number" v-model="to_num">
-            <!-- <p>{{ to_num }}</p> -->
             <select v-model="to_unit">
                 <option v-for="value, unit in units" :key="unit" :value="unit">{{ unit }}</option>
             </select>
@@ -57,14 +56,6 @@ export default {
             this.to_num = this.from_num * this.units[this.from_unit] / this.units[this.to_unit];
         }
     }
-    // computed: {
-    //     to_num: function () {
-    //         return this.from_num * this.units[this.from_unit] / this.units[this.to_unit];
-    //     },
-    //     from_num: function () {
-    //         return this.to_num * this.units[this.to_unit] / this.units[this.from_unit];
-    //     }
-    // }
 }
 </script>
 
