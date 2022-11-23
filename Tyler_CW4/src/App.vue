@@ -44,5 +44,11 @@ export default {
       this.$router.push('/cart');
     },
   },
+  mounted() {
+    if (sessionStorage.getItem('user')) {
+      this.isLogin = true;
+      this.userInfo = JSON.parse(sessionStorage.getItem('user'));
+    }
+  },
 };
 </script>

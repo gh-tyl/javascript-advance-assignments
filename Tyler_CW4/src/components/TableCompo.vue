@@ -87,6 +87,11 @@ export default {
             required: true,
             default: true,
         },
+        shippingFee: {
+            type: Number,
+            required: true,
+            default: 0,
+        },
     },
     data() {
         return {
@@ -134,6 +139,9 @@ export default {
         });
         this.total = this.total.toFixed(2);
         this.totalWithTax = (this.total * 1.1).toFixed(2);
+        // add shipping fee
+        this.tota += this.shippingFee;
+        this.totalWithTax += this.shippingFee;
     },
 }
 </script>
